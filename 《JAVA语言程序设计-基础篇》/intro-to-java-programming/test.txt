@@ -1,0 +1,7 @@
+.\javaw.exe ^
+-XX:+ShowCodeDetailsInExceptionMessages ^
+-agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:11258 "-javaagent:C:\Users\loken\eclipse\java-2022-06\eclipse\configuration\org.eclipse.osgi\215\0\.cp\lib\javaagent-shaded.jar" ^
+-Dfile.encoding=UTF-8 ^
+-classpath "C:\Users\loken\eclipse-workspace\demo2\bin" ch_10.exercise10_10.Exercise10_10
+
+-classpath "C:\Users\loken\eclipse-workspace\demo2\bin" ch_10.exercise10_10.Exercise10_10 C:\Users\loken\eclipse-workspace\demo2\src\ch_10\exercise10_10

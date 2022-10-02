@@ -1,0 +1,1940 @@
+desc: (none)
+cmd: ./gemalloc
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=14551432
+mem_heap_B=198277
+mem_heap_extra_B=35555
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=28029580
+mem_heap_B=346680
+mem_heap_extra_B=93536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=36882822
+mem_heap_B=470027
+mem_heap_extra_B=132621
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=50046095
+mem_heap_B=554433
+mem_heap_extra_B=154543
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=60157396
+mem_heap_B=695642
+mem_heap_extra_B=180550
+mem_stacks_B=0
+heap_tree=detailed
+n11: 695642 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 204088 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 107384 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 74904 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 47008 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 29240 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 20168 in 7 places, all below massif's threshold (01.00%)
+      n1: 9072 0x4574741: g_param_spec_int (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n0: 9072 in 5 places, all below massif's threshold (01.00%)
+     n2: 17768 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 12688 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 12688 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 12688 in 4 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+    n0: 12288 in 9 places, all below massif's threshold (01.00%)
+   n0: 32480 in 14 places, all below massif's threshold (01.00%)
+  n2: 96704 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 93944 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 85792 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 81752 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 58272 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n3: 58272 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+        n0: 21456 in 5 places, all below massif's threshold (01.00%)
+        n1: 12264 0x41CC3C2: gtk_rc_style_new (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 12264 0x41CEFE5: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n0: 12264 in 2 places, all below massif's threshold (01.00%)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6112 in 4 places, all below massif's threshold (01.00%)
+   n0: 2760 in 7 places, all below massif's threshold (01.00%)
+ n2: 137359 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n5: 118591 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 53168 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 17536 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 17536 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 17536 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 17536 in 19 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 17536 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 17536 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 17536 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 17536 in 19 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n1: 13568 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 13568 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 13568 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 13568 in 15 places, all below massif's threshold (01.00%)
+    n0: 4528 in 11 places, all below massif's threshold (01.00%)
+   n0: 24907 in 38 places, all below massif's threshold (01.00%)
+   n1: 17244 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 17244 in 10 places, all below massif's threshold (01.00%)
+   n1: 13880 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 13880 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 13708 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 13708 in 20 places, all below massif's threshold (01.00%)
+     n0: 172 in 1 place, below massif's threshold (01.00%)
+   n1: 9392 0x4564444: g_closure_new_simple (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 9392 in 3 places, all below massif's threshold (01.00%)
+  n0: 5792 in 15 places, all below massif's threshold (01.00%)
+ n0: 124798 in 240 places, all below massif's threshold (01.00%)
+ n1: 63670 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 63670 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 63670 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n1: 15533 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15533 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15533 in 19 places, all below massif's threshold (01.00%)
+    n0: 15369 in 19 places, all below massif's threshold (01.00%)
+ n2: 60961 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n5: 60077 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 18087 in 53 places, all below massif's threshold (01.00%)
+   n1: 11620 0x40ADB0E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+    n1: 11620 0x40AF1B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 11620 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 7952 in 21 places, all below massif's threshold (01.00%)
+   n1: 11158 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 11158 in 97 places, all below massif's threshold (01.00%)
+   n2: 10080 0x457A4AF: g_signal_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 9264 0x457ADB1: g_signal_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 9072 0x457AF2A: g_signal_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 7104 in 16 places, all below massif's threshold (01.00%)
+     n0: 192 in 1 place, below massif's threshold (01.00%)
+    n0: 816 in 1 place, below massif's threshold (01.00%)
+   n1: 9132 0x45F70B1: g_malloc_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 9132 in 23 places, all below massif's threshold (01.00%)
+  n0: 564 in 11 places, all below massif's threshold (01.00%)
+ n2: 31852 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 31852 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 31852 in 19 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 10314 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 10314 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 10314 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 10314 in 2 places, all below massif's threshold (01.00%)
+ n1: 9000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 9000 0x4A1B954: cairo_scaled_font_glyph_extents (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 9000 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=6
+#-----------
+time=75584315
+mem_heap_B=848525
+mem_heap_extra_B=214835
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=86277056
+mem_heap_B=1095279
+mem_heap_extra_B=220905
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=98528375
+mem_heap_B=917391
+mem_heap_extra_B=221033
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=106768096
+mem_heap_B=1126579
+mem_heap_extra_B=221037
+mem_stacks_B=0
+heap_tree=detailed
+n14: 1126579 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 251752 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145096 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 89376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 58200 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 29240 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 29240 in 8 places, all below massif's threshold (01.00%)
+     n2: 28960 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 23880 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 23880 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 23880 in 6 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+    n0: 15568 in 11 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+   n0: 55720 in 22 places, all below massif's threshold (01.00%)
+  n2: 106656 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 102376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 93976 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 89936 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 66456 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n2: 66456 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 41904 in 7 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 4280 in 9 places, all below massif's threshold (01.00%)
+ n0: 200947 in 290 places, all below massif's threshold (01.00%)
+ n2: 156447 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n4: 136363 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 60656 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 19968 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 19968 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n1: 16000 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 16000 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 16000 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 16000 in 23 places, all below massif's threshold (01.00%)
+    n0: 4720 in 12 places, all below massif's threshold (01.00%)
+   n0: 38635 in 51 places, all below massif's threshold (01.00%)
+   n1: 21000 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21000 in 11 places, all below massif's threshold (01.00%)
+   n1: 16072 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 16072 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 15512 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 15512 in 22 places, all below massif's threshold (01.00%)
+     n0: 560 in 1 place, below massif's threshold (01.00%)
+  n0: 5420 in 20 places, all below massif's threshold (01.00%)
+ n1: 111784 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 111784 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 111784 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 92316 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 91110 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 56663 in 65 places, all below massif's threshold (01.00%)
+   n1: 20020 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 20020 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 20020 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 20020 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 20020 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 20020 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 20020 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 20020 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 20020 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n2: 20020 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 16380 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 16380 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n0: 16380 in 5 places, all below massif's threshold (01.00%)
+             n0: 3640 in 2 places, all below massif's threshold (01.00%)
+   n1: 14427 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 14427 in 130 places, all below massif's threshold (01.00%)
+  n0: 598 in 14 places, all below massif's threshold (01.00%)
+ n2: 65512 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 65512 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 36168 in 20 places, all below massif's threshold (01.00%)
+   n2: 29344 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 27680 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 25536 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 24928 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 24928 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 22528 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 22528 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n2: 22528 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 18432 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 18432 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 18432 in 5 places, all below massif's threshold (01.00%)
+           n0: 4096 in 2 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2144 in 2 places, all below massif's threshold (01.00%)
+    n0: 1664 in 3 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 63734 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 63734 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 63734 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n1: 15597 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15597 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15597 in 20 places, all below massif's threshold (01.00%)
+    n0: 15369 in 20 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0xA716: ???
+  n0: 0 in 11 places, all below massif's threshold (01.00%)
+ n2: 40960 0x4A2B65E: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 40960 0xBE9CECF2: ???
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n2: 18000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 13500 0x4A1B954: cairo_scaled_font_glyph_extents (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 13500 in 2 places, all below massif's threshold (01.00%)
+  n0: 4500 in 1 place, below massif's threshold (01.00%)
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 14183 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 14183 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 14183 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 14183 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=10
+#-----------
+time=118508693
+mem_heap_B=1083663
+mem_heap_extra_B=221201
+mem_stacks_B=0
+heap_tree=detailed
+n14: 1083663 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 251752 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145096 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 89376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 58200 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 29240 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 29240 in 8 places, all below massif's threshold (01.00%)
+     n2: 28960 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 23880 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 23880 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 23880 in 6 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+    n0: 15568 in 11 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+   n0: 55720 in 22 places, all below massif's threshold (01.00%)
+  n2: 106656 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 102376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 93976 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 89936 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 66456 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n2: 66456 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 41904 in 7 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 4280 in 9 places, all below massif's threshold (01.00%)
+ n0: 195687 in 290 places, all below massif's threshold (01.00%)
+ n2: 156471 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n4: 136387 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 60656 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 19968 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 19968 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n1: 16000 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 16000 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 16000 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 16000 in 23 places, all below massif's threshold (01.00%)
+    n0: 4720 in 12 places, all below massif's threshold (01.00%)
+   n0: 38659 in 51 places, all below massif's threshold (01.00%)
+   n1: 21000 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21000 in 11 places, all below massif's threshold (01.00%)
+   n1: 16072 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 16072 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 15512 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 15512 in 22 places, all below massif's threshold (01.00%)
+     n0: 560 in 1 place, below massif's threshold (01.00%)
+  n0: 5420 in 20 places, all below massif's threshold (01.00%)
+ n2: 92316 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 91110 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 56663 in 65 places, all below massif's threshold (01.00%)
+   n1: 20020 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 20020 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 20020 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 20020 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 20020 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 20020 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 20020 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 20020 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 20020 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n2: 20020 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 16380 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 16380 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n0: 16380 in 5 places, all below massif's threshold (01.00%)
+             n0: 3640 in 2 places, all below massif's threshold (01.00%)
+   n1: 14427 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 14427 in 130 places, all below massif's threshold (01.00%)
+  n0: 598 in 14 places, all below massif's threshold (01.00%)
+ n1: 74104 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 74104 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 74104 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 65512 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 65512 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 36168 in 20 places, all below massif's threshold (01.00%)
+   n2: 29344 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 27680 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 25536 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 24928 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 24928 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 22528 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 22528 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n2: 22528 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 18432 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 18432 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 18432 in 5 places, all below massif's threshold (01.00%)
+           n0: 4096 in 2 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2144 in 2 places, all below massif's threshold (01.00%)
+    n0: 1664 in 3 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 63734 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 63734 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 63734 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n1: 15597 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15597 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15597 in 20 places, all below massif's threshold (01.00%)
+    n0: 15369 in 20 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0xE16C: ???
+  n0: 0 in 17 places, all below massif's threshold (01.00%)
+ n2: 40960 0x4A2B65E: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 40960 0xBE9CECF2: ???
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n2: 18000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 13500 0x4A1B954: cairo_scaled_font_glyph_extents (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 13500 in 2 places, all below massif's threshold (01.00%)
+  n0: 4500 in 1 place, below massif's threshold (01.00%)
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 14183 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 14183 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 14183 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 14183 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=11
+#-----------
+time=132888844
+mem_heap_B=1135739
+mem_heap_extra_B=221421
+mem_stacks_B=0
+heap_tree=detailed
+n15: 1135739 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 251752 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145096 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 89376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 58200 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 29240 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 29240 in 8 places, all below massif's threshold (01.00%)
+     n2: 28960 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 23880 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 23880 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 23880 in 6 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+    n0: 15568 in 11 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+   n0: 55720 in 22 places, all below massif's threshold (01.00%)
+  n2: 106656 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 102376 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 93976 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 89936 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 66456 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n2: 66456 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 41904 in 7 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 4280 in 9 places, all below massif's threshold (01.00%)
+ n0: 194455 in 289 places, all below massif's threshold (01.00%)
+ n2: 156495 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n4: 136411 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 60656 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 19968 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 19968 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19968 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19968 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19968 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n1: 16000 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 16000 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 16000 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 16000 in 23 places, all below massif's threshold (01.00%)
+    n0: 4720 in 12 places, all below massif's threshold (01.00%)
+   n0: 38683 in 51 places, all below massif's threshold (01.00%)
+   n1: 21000 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21000 in 11 places, all below massif's threshold (01.00%)
+   n1: 16072 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 16072 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 15512 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 15512 in 22 places, all below massif's threshold (01.00%)
+     n0: 560 in 1 place, below massif's threshold (01.00%)
+  n0: 5420 in 20 places, all below massif's threshold (01.00%)
+ n1: 109684 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 109684 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 109684 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 92316 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 91110 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 56663 in 65 places, all below massif's threshold (01.00%)
+   n1: 20020 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 20020 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 20020 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 20020 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 20020 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 20020 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 20020 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 20020 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 20020 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n2: 20020 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 16380 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 16380 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n0: 16380 in 5 places, all below massif's threshold (01.00%)
+             n0: 3640 in 2 places, all below massif's threshold (01.00%)
+   n1: 14427 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 14427 in 130 places, all below massif's threshold (01.00%)
+  n0: 598 in 14 places, all below massif's threshold (01.00%)
+ n2: 65512 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 65512 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 36168 in 20 places, all below massif's threshold (01.00%)
+   n2: 29344 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 27680 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 25536 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 24928 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 24928 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 22528 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 22528 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n2: 22528 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 18432 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 18432 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 18432 in 5 places, all below massif's threshold (01.00%)
+           n0: 4096 in 2 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2144 in 2 places, all below massif's threshold (01.00%)
+    n0: 1664 in 3 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 63734 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 63734 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 63734 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n1: 15597 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15597 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15597 in 20 places, all below massif's threshold (01.00%)
+    n0: 15369 in 20 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0x14E2E: ???
+  n0: 0 in 23 places, all below massif's threshold (01.00%)
+ n2: 40960 0x4A2B65E: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 40960 0xBE9CECF2: ???
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n1: 18000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 18000 in 2 places, all below massif's threshold (01.00%)
+ n2: 17704 0x4A08009: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n2: 17168 0x4A080AB: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n1: 16184 0x4A08E39: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+    n0: 16184 in 2 places, all below massif's threshold (01.00%)
+   n0: 984 in 2 places, all below massif's threshold (01.00%)
+  n0: 536 in 1 place, below massif's threshold (01.00%)
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 14183 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 14183 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 14183 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 14183 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=12
+#-----------
+time=141841947
+mem_heap_B=922995
+mem_heap_extra_B=224269
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=149400581
+mem_heap_B=923907
+mem_heap_extra_B=224189
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=162682150
+mem_heap_B=931260
+mem_heap_extra_B=224740
+mem_stacks_B=0
+heap_tree=detailed
+n11: 931260 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 258848 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 151176 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 93944 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 32016 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 26936 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 26936 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 26936 in 8 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+     n1: 30752 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 30752 in 8 places, all below massif's threshold (01.00%)
+    n0: 15568 in 11 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+   n0: 45136 in 21 places, all below massif's threshold (01.00%)
+   n1: 12096 0x45DFEB0: g_hash_table_new_full (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 12096 in 3 places, all below massif's threshold (01.00%)
+  n2: 107672 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n3: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 30656 in 7 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+        n1: 12264 0x41CC3C2: gtk_rc_style_new (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 12264 0x41CEFE5: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n0: 12264 in 2 places, all below massif's threshold (01.00%)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 4280 in 9 places, all below massif's threshold (01.00%)
+ n0: 202183 in 306 places, all below massif's threshold (01.00%)
+ n2: 158463 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n5: 137831 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 60368 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 19872 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19872 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19872 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19872 in 31 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 19872 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 19872 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 19872 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 19872 in 31 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 15904 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 15904 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 15904 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 15904 in 27 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 4720 in 12 places, all below massif's threshold (01.00%)
+   n0: 27271 in 51 places, all below massif's threshold (01.00%)
+   n1: 21864 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21864 in 11 places, all below massif's threshold (01.00%)
+   n1: 16476 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 16476 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 15916 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 15916 in 23 places, all below massif's threshold (01.00%)
+     n0: 560 in 1 place, below massif's threshold (01.00%)
+   n1: 11852 0x4564444: g_closure_new_simple (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 11852 in 3 places, all below massif's threshold (01.00%)
+  n0: 5632 in 22 places, all below massif's threshold (01.00%)
+ n2: 93293 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n4: 92087 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 44126 in 67 places, all below massif's threshold (01.00%)
+   n1: 21840 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 21840 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 21840 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 21840 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 21840 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 21840 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 21840 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 21840 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 21840 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n2: 21840 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 16380 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 16380 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n0: 16380 in 5 places, all below massif's threshold (01.00%)
+             n0: 5460 in 3 places, all below massif's threshold (01.00%)
+   n1: 14501 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 14501 in 132 places, all below massif's threshold (01.00%)
+   n1: 11620 0x40ADB0E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+    n1: 11620 0x40AF1B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 11620 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 7952 in 21 places, all below massif's threshold (01.00%)
+  n0: 598 in 17 places, all below massif's threshold (01.00%)
+ n2: 68676 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 68676 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 37092 in 20 places, all below massif's threshold (01.00%)
+   n2: 31584 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 29920 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 27584 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 26976 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 26976 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 24576 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 24576 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n2: 24576 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 18432 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 18432 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 18432 in 5 places, all below massif's threshold (01.00%)
+           n0: 6144 in 3 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2336 in 2 places, all below massif's threshold (01.00%)
+    n0: 1664 in 3 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 64014 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64014 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 64014 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n0: 15649 in 20 places, all below massif's threshold (01.00%)
+    n1: 15597 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15597 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15597 in 20 places, all below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n2: 18000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 13500 0x4A1B954: cairo_scaled_font_glyph_extents (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 13500 in 2 places, all below massif's threshold (01.00%)
+  n0: 4500 in 1 place, below massif's threshold (01.00%)
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 14183 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 14183 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 14183 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 14183 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=15
+#-----------
+time=172688155
+mem_heap_B=931352
+mem_heap_extra_B=224768
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=180259923
+mem_heap_B=931580
+mem_heap_extra_B=224860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=191619663
+mem_heap_B=966661
+mem_heap_extra_B=240315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=206972994
+mem_heap_B=987351
+mem_heap_extra_B=241625
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=220335862
+mem_heap_B=970119
+mem_heap_extra_B=241585
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=229322228
+mem_heap_B=1168831
+mem_heap_extra_B=242425
+mem_stacks_B=0
+heap_tree=detailed
+n15: 1168831 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 281672 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 173136 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 94424 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 32016 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 26936 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 26936 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 26936 in 8 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+     n1: 30752 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 30752 in 8 places, all below massif's threshold (01.00%)
+    n0: 16048 in 12 places, all below massif's threshold (01.00%)
+    n1: 14616 0x40AEFD1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+     n1: 14616 0x40AF419: gtk_binding_entry_add_signal (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n0: 11592 in 7 places, all below massif's threshold (01.00%)
+   n0: 78712 in 24 places, all below massif's threshold (01.00%)
+  n2: 108536 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n3: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n2: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 42920 in 8 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+      n2: 18376 0x456BCF7: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 14296 0x456C541: g_object_new_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 11240 in 3 places, all below massif's threshold (01.00%)
+       n0: 4080 in 1 place, below massif's threshold (01.00%)
+      n0: 5104 in 2 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5144 in 11 places, all below massif's threshold (01.00%)
+ n0: 200359 in 303 places, all below massif's threshold (01.00%)
+ n2: 165663 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n4: 145031 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n4: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 22176 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 22176 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 22176 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 22176 in 44 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 22176 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 22176 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 22176 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 22176 in 44 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 18208 0x45DF667: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 18208 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 18208 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 18208 in 40 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 4784 in 12 places, all below massif's threshold (01.00%)
+   n0: 39347 in 53 places, all below massif's threshold (01.00%)
+   n1: 21864 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21864 in 11 places, all below massif's threshold (01.00%)
+   n1: 16476 0x4580964: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n2: 16476 0x458122F: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 15916 0x458601B: g_type_register_static (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 15916 in 23 places, all below massif's threshold (01.00%)
+     n0: 560 in 1 place, below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 95232 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 94026 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 57685 in 69 places, all below massif's threshold (01.00%)
+   n1: 21840 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 21840 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 21840 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 21840 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 21840 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 21840 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 21840 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 21840 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 21840 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n2: 21840 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 16380 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 16380 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n0: 16380 in 5 places, all below massif's threshold (01.00%)
+             n0: 5460 in 3 places, all below massif's threshold (01.00%)
+   n1: 14501 0x460CB89: g_strdup (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 14501 in 133 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n1: 84784 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 84784 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 84784 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 75940 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 75940 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 38400 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 29920 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 27584 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 26976 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 26976 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 24576 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 24576 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n2: 24576 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 18432 0x41F539E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 18432 0x42B1B4E: gtk_widget_size_request (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 18432 in 5 places, all below massif's threshold (01.00%)
+           n0: 6144 in 3 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2336 in 2 places, all below massif's threshold (01.00%)
+    n0: 8480 in 3 places, all below massif's threshold (01.00%)
+   n0: 37540 in 20 places, all below massif's threshold (01.00%)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 64014 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64014 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n3: 64014 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n2: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n1: 16384 0x49A773A: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+       n1: 16384 0x4587709: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 16384 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n0: 16384 0x50433: ???
+      n1: 16384 0x4A5978C: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+       n1: 16384 0x4A5994B: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+        n1: 16384 0x4A59D00: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+         n1: 16384 0x4A5C24D: cairo_ft_font_face_create_for_pattern (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+          n1: 16384 0x49A6EAC: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+           n1: 16384 0x49A3012: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+            n1: 16384 0x49A6F7C: ??? (in /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3000.0)
+             n1: 16384 0x4C1CCDC: pango_fc_font_lock_face (in /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3000.0)
+              n1: 16384 0x670FBBF: ??? (in /usr/lib/i386-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so)
+               n1: 16384 0x4C5C4AB: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                n1: 16384 0x4C6DB9A: pango_shape (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                 n1: 16384 0x4C4DAE7: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                  n1: 16384 0x4C4DDD2: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+                   n0: 16384 0x4C62F99: ??? (in /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3000.0)
+    n0: 15649 in 20 places, all below massif's threshold (01.00%)
+    n1: 15597 0x4DBF159: ft_mem_qrealloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 15597 0x4DBF1D8: ft_mem_realloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 15597 in 20 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0x1016: ???
+  n0: 0 in 29 places, all below massif's threshold (01.00%)
+ n2: 40960 0x4A2B65E: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 40960 0xBE9CED12: ???
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+ n1: 18000 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 18000 in 2 places, all below massif's threshold (01.00%)
+ n2: 17080 0x4A08009: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n2: 17080 0x4A080AB: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n1: 16096 0x4A08E39: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+    n0: 16096 in 2 places, all below massif's threshold (01.00%)
+   n0: 984 in 2 places, all below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 16384 0x48919F0: XOpenDisplay (in /usr/lib/i386-linux-gnu/libX11.so.6.3.0)
+  n0: 16384 0x46D8531: (below main) (libc-start.c:226)
+ n1: 16352 0x4C94DD2: ??? (in /usr/lib/i386-linux-gnu/libfontconfig.so.1.4.4)
+  n0: 16352 in 3 places, all below massif's threshold (01.00%)
+ n1: 14183 0x400ADCE: _dl_new_object (dl-object.c:77)
+  n1: 14183 0x40063F6: _dl_map_object_from_fd (dl-load.c:1051)
+   n1: 14183 0x400835E: _dl_map_object (dl-load.c:2568)
+    n0: 14183 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=21
+#-----------
+time=243011055
+mem_heap_B=1120099
+mem_heap_extra_B=242613
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=253072706
+mem_heap_B=983723
+mem_heap_extra_B=242685
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=260836880
+mem_heap_B=1166795
+mem_heap_extra_B=242765
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=272906440
+mem_heap_B=1055232
+mem_heap_extra_B=242944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=282775217
+mem_heap_B=1381960
+mem_heap_extra_B=244440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=289699000
+mem_heap_B=1542060
+mem_heap_extra_B=244484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=298737983
+mem_heap_B=1702160
+mem_heap_extra_B=244528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=307718383
+mem_heap_B=1814410
+mem_heap_extra_B=245294
+mem_stacks_B=0
+heap_tree=detailed
+n9: 1814410 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 800000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 800000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 800000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 800000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 800000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 800000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 800000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 800000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 800000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 800000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n2: 284424 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 175888 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 32016 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 26936 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 26936 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 26936 in 8 places, all below massif's threshold (01.00%)
+      n0: 5080 in 2 places, all below massif's threshold (01.00%)
+     n1: 30752 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 30752 in 8 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 80224 in 25 places, all below massif's threshold (01.00%)
+  n2: 108536 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n2: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 42920 in 8 places, all below massif's threshold (01.00%)
+        n1: 24552 0x6632C70: theme_create_rc_style (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+         n1: 24552 0x4254908: gtk_theme_engine_create_rc_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24552 0x41CEBA6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 24552 0x41CF6E1: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 24552 0x41CF84F: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n1: 24552 0x41CFA39: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+              n1: 24552 0x41CFF10: gtk_rc_reparse_all_for_settings (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+               n1: 24552 0x41F0822: gtk_settings_get_for_screen (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                n1: 24552 0x41950EB: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+                 n1: 24552 0x456868E: g_cclosure_marshal_VOID__OBJECTv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                  n1: 24552 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                   n1: 24552 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                    n1: 24552 0x457F89D: g_signal_emit_by_name (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+                     n0: 24552 0x44F49F3: gdk_display_open (in /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.10)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5144 in 11 places, all below massif's threshold (01.00%)
+ n0: 284254 in 310 places, all below massif's threshold (01.00%)
+ n2: 165735 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n3: 145055 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n3: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 22992 in 13 places, all below massif's threshold (01.00%)
+    n2: 22176 0x45DF641: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 22176 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 22176 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 22176 in 44 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 22176 0x45DF681: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 22176 0x45DFA40: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+      n1: 22176 0x45DFE28: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+       n0: 22176 in 44 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+   n0: 55847 in 54 places, all below massif's threshold (01.00%)
+   n1: 21864 0x4584B58: g_type_class_ref (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n0: 21864 in 11 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 96211 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 95005 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 73165 in 70 places, all below massif's threshold (01.00%)
+   n1: 21840 0x460B22C: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 21840 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n1: 21840 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 21840 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 21840 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n1: 21840 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+         n1: 21840 0x6627CD0: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+          n1: 21840 0x41CBDC8: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n1: 21840 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+            n1: 21840 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+             n0: 21840 in 4 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n2: 76368 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 76368 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 38656 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 30176 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n2: 27584 0x41C9F17: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+      n1: 26976 0x41CA166: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+       n2: 26976 0x6627FF9: ??? (in /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so)
+        n1: 24576 0x41CBD56: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 24576 0x41D07D9: gtk_rc_get_style (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+          n1: 24576 0x42BA2B6: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+           n0: 24576 in 4 places, all below massif's threshold (01.00%)
+        n0: 2400 in 1 place, below massif's threshold (01.00%)
+      n0: 608 in 1 place, below massif's threshold (01.00%)
+     n0: 2592 in 2 places, all below massif's threshold (01.00%)
+    n0: 8480 in 3 places, all below massif's threshold (01.00%)
+   n0: 37712 in 20 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n2: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 32768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31286 in 21 places, all below massif's threshold (01.00%)
+ n1: 22500 0x4A19FC6: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 22500 in 2 places, all below massif's threshold (01.00%)
+ n1: 20864 0x4D91D8E: xcb_connect_to_fd (in /usr/lib/i386-linux-gnu/libxcb.so.1.1.0)
+  n0: 20864 0x4FD74AE: ???
+#-----------
+snapshot=29
+#-----------
+time=317099544
+mem_heap_B=1979182
+mem_heap_extra_B=245410
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=324989801
+mem_heap_B=1809053
+mem_heap_extra_B=245387
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=338476664
+mem_heap_B=1971006
+mem_heap_extra_B=245442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=347700811
+mem_heap_B=1942530
+mem_heap_extra_B=244750
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=363050542
+mem_heap_B=2102630
+mem_heap_extra_B=244794
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=371299456
+mem_heap_B=2182680
+mem_heap_extra_B=244816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=380128145
+mem_heap_B=2264746
+mem_heap_extra_B=245742
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=391244938
+mem_heap_B=2344796
+mem_heap_extra_B=245772
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=401213194
+mem_heap_B=2424846
+mem_heap_extra_B=245794
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=411757437
+mem_heap_B=2504896
+mem_heap_extra_B=245816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=422873877
+mem_heap_B=2584946
+mem_heap_extra_B=245838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=430490123
+mem_heap_B=2617890
+mem_heap_extra_B=246830
+mem_stacks_B=0
+heap_tree=detailed
+n7: 2617890 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1600000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 1600000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 1600000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 1600000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 1600000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 1600000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 1600000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 1600000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 1600000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 1600000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 327618 in 312 places, all below massif's threshold (01.00%)
+ n2: 287184 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 178648 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 32016 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 32016 in 3 places, all below massif's threshold (01.00%)
+     n1: 30752 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 30752 in 8 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 82984 in 26 places, all below massif's threshold (01.00%)
+  n2: 108536 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5144 in 11 places, all below massif's threshold (01.00%)
+ n2: 165715 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145035 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 77691 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 96919 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 95713 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 95713 in 71 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n2: 76400 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 76400 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 38656 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 30176 0x45C2AE9: g_array_insert_vals (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+     n0: 30176 in 3 places, all below massif's threshold (01.00%)
+    n0: 8480 in 3 places, all below massif's threshold (01.00%)
+   n0: 37744 in 20 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n2: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 32768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31286 in 21 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=41
+#-----------
+time=440508633
+mem_heap_B=2782606
+mem_heap_extra_B=246938
+mem_stacks_B=0
+heap_tree=detailed
+n10: 2782606 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1600000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 1600000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 1600000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 1600000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 1600000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 1600000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 1600000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 1600000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 1600000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 1600000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 309086 in 309 places, all below massif's threshold (01.00%)
+ n2: 287184 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 178648 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 32016 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 32016 in 3 places, all below massif's threshold (01.00%)
+     n1: 30752 0x4570AD1: g_param_spec_internal (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n0: 30752 in 8 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 82984 in 26 places, all below massif's threshold (01.00%)
+  n2: 108536 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5144 in 11 places, all below massif's threshold (01.00%)
+ n2: 165779 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145099 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 77755 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 97007 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 95801 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 95801 in 71 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n1: 84784 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 84784 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 84784 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 76408 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 76408 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n1: 38656 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 38656 in 4 places, all below massif's threshold (01.00%)
+   n0: 37752 in 20 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n2: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n1: 32768 0x4DC024E: FT_New_Library (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+     n1: 32768 0x4DBA218: FT_Init_FreeType (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+      n0: 32768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31286 in 21 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0x1116: ???
+  n0: 0 in 38 places, all below massif's threshold (01.00%)
+ n2: 40960 0x4A2B65E: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 40960 0xBE9CED02: ???
+  n0: 0 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=42
+#-----------
+time=454888863
+mem_heap_B=2746206
+mem_heap_extra_B=246298
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=467219808
+mem_heap_B=3384870
+mem_heap_extra_B=246458
+mem_stacks_B=0
+heap_tree=detailed
+n7: 3384870 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2400000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 2400000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 2400000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 2400000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 2400000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 2400000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 2400000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 2400000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 2400000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 2400000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 293886 in 312 places, all below massif's threshold (01.00%)
+ n2: 287184 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 178648 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n0: 62768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 82984 in 26 places, all below massif's threshold (01.00%)
+  n2: 108536 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5144 in 11 places, all below massif's threshold (01.00%)
+ n2: 165791 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145111 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 77767 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 97491 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 96285 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 96285 in 71 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n2: 76464 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 76464 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n1: 38656 0x45C24B3: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 38656 in 4 places, all below massif's threshold (01.00%)
+   n0: 37808 in 20 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n1: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n0: 64054 in 22 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=44
+#-----------
+time=477012573
+mem_heap_B=3410241
+mem_heap_extra_B=247239
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=488727229
+mem_heap_B=4206934
+mem_heap_extra_B=249698
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=498936311
+mem_heap_B=4387854
+mem_heap_extra_B=249802
+mem_stacks_B=0
+heap_tree=peak
+n9: 4387854 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3200000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 3200000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 3200000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 3200000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 3200000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 3200000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 3200000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 3200000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 3200000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 3200000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 350090 in 310 places, all below massif's threshold (01.00%)
+ n2: 290712 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 181672 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n0: 62768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 86008 in 26 places, all below massif's threshold (01.00%)
+  n2: 109040 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5648 in 12 places, all below massif's threshold (01.00%)
+ n2: 165855 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145175 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 77831 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 98247 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 97041 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 97041 in 71 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n1: 84784 0x49DFF6D: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n1: 84784 0x4A23E5F: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+   n0: 84784 0x4A2004A: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+ n2: 76768 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 76768 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 76768 in 21 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n1: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n0: 64054 in 22 places, all below massif's threshold (01.00%)
+ n2: 57344 0x4A13FAC: ??? (in /usr/lib/i386-linux-gnu/libcairo.so.2.11000.2)
+  n0: 57344 0x1016: ???
+  n0: 0 in 39 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=47
+#-----------
+time=508255453
+mem_heap_B=4189270
+mem_heap_extra_B=248970
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=518706554
+mem_heap_B=4388206
+mem_heap_extra_B=249882
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=528069317
+mem_heap_B=4194422
+mem_heap_extra_B=249370
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=535043031
+mem_heap_B=4223914
+mem_heap_extra_B=249926
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=541967661
+mem_heap_B=4190226
+mem_heap_extra_B=249326
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=548906779
+mem_heap_B=4192358
+mem_heap_extra_B=250178
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=556042122
+mem_heap_B=4193922
+mem_heap_extra_B=250206
+mem_stacks_B=0
+heap_tree=detailed
+n7: 4193922 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3200000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 3200000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 3200000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 3200000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 3200000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 3200000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 3200000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 3200000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 3200000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 3200000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 294370 in 312 places, all below massif's threshold (01.00%)
+ n2: 291704 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 182664 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n0: 62768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 87000 in 27 places, all below massif's threshold (01.00%)
+  n2: 109040 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5648 in 12 places, all below massif's threshold (01.00%)
+ n2: 166151 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145471 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 78127 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 99035 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 97829 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 97829 in 71 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n2: 78608 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 78608 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 78608 in 21 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n1: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n0: 64054 in 22 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=54
+#-----------
+time=563220895
+mem_heap_B=4194218
+mem_heap_extra_B=250398
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=570255096
+mem_heap_B=4194426
+mem_heap_extra_B=250422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=577450085
+mem_heap_B=4194426
+mem_heap_extra_B=250422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=584394643
+mem_heap_B=4189907
+mem_heap_extra_B=249757
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=591555549
+mem_heap_B=4189910
+mem_heap_extra_B=249754
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=598499449
+mem_heap_B=4190295
+mem_heap_extra_B=249809
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=605702927
+mem_heap_B=4190298
+mem_heap_extra_B=249806
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=612932290
+mem_heap_B=4190522
+mem_heap_extra_B=249838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=619856566
+mem_heap_B=4189146
+mem_heap_extra_B=249790
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=626983783
+mem_heap_B=4190682
+mem_heap_extra_B=249806
+mem_stacks_B=0
+heap_tree=detailed
+n7: 4190682 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3200000 0x80493E2: do_malloc (gemalloc.c:61)
+  n1: 3200000 0x8049576: button_malloc_clicked (gemalloc.c:102)
+   n1: 3200000 0x4567241: g_cclosure_marshal_VOID__VOIDv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+    n1: 3200000 0x4565725: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n1: 3200000 0x457EA17: g_signal_emit_valist (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 3200000 0x457F441: g_signal_emit (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 3200000 0x40BA288: gtk_button_clicked (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+        n1: 3200000 0x40BB69E: ??? (in /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.10)
+         n1: 3200000 0x45671EA: g_cclosure_marshal_VOID__VOID (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+          n0: 3200000 0x45642FB: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+ n0: 294454 in 312 places, all below massif's threshold (01.00%)
+ n2: 291704 0x45BF2E0: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 182664 0x460B6FE: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 95664 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n1: 62768 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n0: 62768 in 2 places, all below massif's threshold (01.00%)
+    n0: 31904 in 13 places, all below massif's threshold (01.00%)
+   n0: 87000 in 27 places, all below massif's threshold (01.00%)
+  n2: 109040 0x460B6D6: g_slice_alloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n2: 103392 0x460B794: g_slice_alloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n2: 94992 0x4587676: g_type_create_instance (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+     n2: 90952 0x456A506: ??? (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+      n1: 67472 0x456C22F: g_object_newv (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+       n1: 67472 0x456C7C6: g_object_new (in /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.3200.4)
+        n0: 67472 in 9 places, all below massif's threshold (01.00%)
+      n0: 23480 in 3 places, all below massif's threshold (01.00%)
+     n0: 4040 in 1 place, below massif's threshold (01.00%)
+    n0: 6360 in 5 places, all below massif's threshold (01.00%)
+   n0: 5648 in 12 places, all below massif's threshold (01.00%)
+ n2: 166151 0x45F6751: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n2: 145471 0x45F6E69: g_malloc0 (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 78127 in 55 places, all below massif's threshold (01.00%)
+   n1: 67344 0x45F7131: g_malloc0_n (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+    n0: 67344 in 15 places, all below massif's threshold (01.00%)
+  n0: 5632 in 24 places, all below massif's threshold (01.00%)
+ n2: 96151 0x45F6969: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 94945 0x45F6E01: g_malloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 94945 in 72 places, all below massif's threshold (01.00%)
+  n0: 598 in 21 places, all below massif's threshold (01.00%)
+ n2: 78168 0x45F6721: ??? (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+  n1: 78168 0x45F6ED7: g_realloc (in /lib/i386-linux-gnu/libglib-2.0.so.0.3200.4)
+   n0: 78168 in 21 places, all below massif's threshold (01.00%)
+  n0: 0 in 5 places, all below massif's threshold (01.00%)
+ n1: 64054 0x4DB9E29: ??? (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+  n1: 64054 0x4DBEC38: ft_mem_qalloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+   n1: 64054 0x4DBECA4: ft_mem_alloc (in /usr/lib/i386-linux-gnu/libfreetype.so.6.8.0)
+    n0: 64054 in 22 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=64
+#-----------
+time=633908386
+mem_heap_B=4188346
+mem_heap_extra_B=249454
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=640848251
+mem_heap_B=4188174
+mem_heap_extra_B=249418
+mem_stacks_B=0
+heap_tree=empty

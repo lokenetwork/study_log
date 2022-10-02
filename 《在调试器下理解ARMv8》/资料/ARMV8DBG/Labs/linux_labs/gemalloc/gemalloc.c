@@ -1,0 +1,536 @@
+/*
+Utility for digging into the internals of ptmalloc by Raymond.
+
+Compile: 
+gcc -g3 gemalloc.c -o gemalloc `pkg-config --cflags --libs gtk+-2.0 gthread-2.0` -lX11
+
+Using private ptmalloc:
+1) compile ptmalloc2
+cd ptmalloc2
+make "linux-pthread"
+2) compile gemalloc
+gcc -g3 gemalloc.c ./ptmalloc2/libmalloc.a -o gemallocwg `pkg-config --cflags --libs gtk+-2.0 gthread-2.0`  -lX11
+*/
+
+#include <gtk/gtk.h>
+#include <malloc.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+#define GE_FLAG_THREAD_MALLOC   1
+#define GE_FLAG_EXIT            2
+#define DATA_BUFFER_LENGTH      2
+
+int * g_databuffer = NULL;
+GtkWidget *g_clist = NULL;
+GtkWidget *g_editno = NULL;
+void * g_lastmalloc = NULL;
+volatile int g_flags = 0;
+static size_t g_block_size = 1000;
+static int g_block_no = 10;
+volatile int g_threads = 0; // no of worker threads
+volatile int g_malloc_tasks = 0; // var for thread communication
+GMutex mutex_list;
+int trace_fd = 0; 
+
+#define GETASK_IDLE  0
+#define GETASK_MALLOC     1
+#define GETASK_NULLP_EVEN 2
+#define GETASK_NULLP_ODD  3
+
+volatile int g_task = GETASK_IDLE;
+
+static gboolean append_list(gpointer szMsg)//const char * szMsg)
+{
+    g_mutex_lock(&mutex_list);
+
+    gtk_clist_append((GtkCList *)g_clist, (gchar**)&szMsg);
+
+    g_mutex_unlock(&mutex_list);
+}
+#define MSG_LINE_MAX 1024
+void d4d(const char * format, ...)
+{
+    char msg[MSG_LINE_MAX];
+    va_list va;
+    va_start( va, format );
+
+    vsprintf(msg, format, va);
+
+    append_list((gpointer)msg);
+    //gdk_threads_add_idle(append_list,msg);
+}
+/*
+KiB Mem :  1009372 total,   179988 free,   459572 used,   369812 buff/cache
+KiB Swap:  1046524 total,   624124 free,   422400 used.   378260 avail Mem 
+
+[38573.949580] Out of memory: Kill process 8522 (gemalloc) score 561 or sacrifice child
+[38573.949623] Killed process 8522 (gemalloc) total-vm:1693220kB, anon-rss:728024kB, file-rss:0kB, shmem-rss:24kB
+[38574.015179] oom_reaper: reaped process 8522 (gemalloc), now anon-rss:0kB, file-rss:0kB, shmem-rss:24kB
+
+
+*/
+void do_malloc(size_t nsize, int no, int threadno)
+{
+    int i = 0;
+    for(i=0;i<no;i++)
+    {
+        g_lastmalloc = malloc(nsize);
+		if(g_lastmalloc)
+		{
+			for(int p=0;p<nsize;p+=4096)
+				*((char*)g_lastmalloc+p) =  p;
+		}
+
+        d4d("thread %d's %dth malloc(%lld) got return %p", threadno, i, nsize, g_lastmalloc); 
+    }
+}
+//
+// trace marker
+void trace_write(const char *fmt, ...)
+{
+	va_list ap;
+	char buf[256];
+	int n;
+
+	if (trace_fd < 0)
+    {
+        d4d("trace marker file is off"); 
+		return;
+    }
+
+	va_start(ap, fmt);
+	n = vsnprintf(buf, 256, fmt, ap);
+	va_end(ap);
+
+	write(trace_fd, buf, n);
+}
+/*
+(gdb) printf "%llx", nsize
+ffffffff80000000
+*/
+
+void button_malloc_clicked( gpointer data )
+{
+    const gchar *entry_text;
+    size_t nsize;
+    int no;
+
+    entry_text = gtk_entry_get_text(GTK_ENTRY(data));
+    if(strstr(entry_text,"0x"))
+        nsize=strtoull(entry_text, NULL, 16);
+    else
+        nsize = atoi(entry_text);
+
+    entry_text = gtk_entry_get_text(GTK_ENTRY(g_editno));
+    no = atoi(entry_text);
+
+    do_malloc(nsize, no, 0);
+
+    //
+    // set global vars to notify worker threads to do allocation
+    if(g_threads>0)
+    {
+		g_task = GETASK_MALLOC;
+        g_malloc_tasks = g_threads; 
+        g_block_size =  nsize;
+        g_block_no = no;
+    }
+    //
+}
+
+void button_mallinfo_clicked( gpointer data )
+{
+    malloc_info(0, stderr);
+
+    append_list("malloc info is dumped to stderr");
+}
+
+void button_mallstat_clicked( gpointer data )
+{
+    malloc_stats();
+
+    append_list("malloc stats are dumped to stderr");
+}
+
+void button_free_clicked( gpointer data )
+{
+    free(g_lastmalloc);    
+
+    d4d("free(%p) returned", g_lastmalloc);
+}
+
+void button_overflow_clicked( gpointer data )
+{
+    const gchar *entry_text;
+    int len;
+	
+    entry_text = gtk_entry_get_text(GTK_ENTRY(g_editno));
+    len = atoi(entry_text);
+
+    d4d("going to flood (%p) with length %d", g_lastmalloc, len*2);
+
+    memset(g_lastmalloc,0xbadbad, len*2);    
+}
+
+void button_wild_clicked( gpointer data )
+{
+    const gchar *entry_text;
+    int element = 0;
+
+
+    entry_text = gtk_entry_get_text(GTK_ENTRY(g_editno));
+    element = atoi(entry_text);
+    g_databuffer[element] = 0x88888888;
+    
+    d4d("writting to wild pointer (%p[%d]) is done", g_databuffer, element);
+}
+
+void button_marker_clicked( gpointer data )
+{
+    const gchar *entry_text;
+
+    entry_text = gtk_entry_get_text(GTK_ENTRY(g_editno));
+    
+    trace_write("trace marker %s", entry_text);
+}
+
+static void *
+thread_func_buggy(void *arg)
+{
+    int n;
+    int tn = (int) arg;
+    void * p = NULL;
+
+    d4d("thread %d starts", tn);
+
+    do
+    {
+        if (g_malloc_tasks>0)
+        {
+            do_malloc(g_block_size, g_block_no, tn);
+            n =__sync_fetch_and_sub(&g_malloc_tasks, 1);
+            d4d("thread %d finished its part at %dth", tn, n);
+        }
+        asm("pause");
+    }while( (g_flags&GE_FLAG_EXIT) == 0 );
+
+    d4d("thread %d exited", tn);
+
+    return NULL;
+}
+static void crash_handler_a(int sig)
+{
+    d4d("catcha: received signal %d: ", sig);
+    if(sig == SIGSEGV)
+    {
+       d4d("catcha: SEGMENT FAULT\n");
+#ifdef JUMP_SEGFAULT
+       longjmp(env, 1);
+#endif
+    }
+    else if(sig == SIGINT)
+       d4d("catcha: INTERRUPTED, by CTRL +C?\n");
+    else
+       d4d("catcha: Not translated signal\n");
+}
+static void crash_handler_b(int sig)
+{
+    d4d("catchb: received signal %d: ", sig);
+    if(sig == SIGSEGV)
+    {
+       d4d("catchb: SEGMENT FAULT\n");
+#ifdef JUMP_SEGFAULT
+       longjmp(env, 1);
+#endif
+    }
+    else if(sig == SIGINT)
+       d4d("catchb: INTERRUPTED, by CTRL +C?\n");
+    else
+       d4d("catchb: Not translated signal\n");
+}
+static int gs_signals[] = 
+{
+    SIGSEGV, /* This is the most common crash */
+    SIGINT,
+    -1
+};
+static void *
+thread_func(void *arg)
+{
+    int n;
+    int tn = (int) arg;
+    void * p = NULL;
+
+    d4d("thread %d starts", tn);
+	
+	signal(SIGSEGV, ((tn%2)==0)?crash_handler_a:crash_handler_b);
+
+    do
+    {
+		if(g_task==GETASK_MALLOC)
+		{
+		    if (g_malloc_tasks>0)
+		    {
+		        n =__sync_fetch_and_sub(&g_malloc_tasks, 1);
+		        if(n>0)
+		        {
+		            do_malloc(g_block_size, g_block_no, tn);
+
+		            d4d("thread %d finished its part at %dth", tn, n);
+		        }
+		        else
+		        {
+		            d4d("thread %d saw tasks but failed to fetch 1, cur tasks %d", 
+		                tn, g_malloc_tasks);
+		        }
+		    }
+		}
+		else if(g_task==GETASK_NULLP_EVEN)
+		{
+			if((tn%2) == 0)
+			{
+				char * p =10;
+			    d4d("thread %d is going to crash", tn);
+				*p=100;
+			}
+		}
+		else if(g_task==GETASK_NULLP_ODD)
+		{
+			if((tn%2) == 1)
+			{
+				char * p =100;
+			    d4d("thread %d is going to crash", tn);
+				*p=100;
+			}
+		}
+        asm("pause");
+    }while( (g_flags&GE_FLAG_EXIT) == 0 );
+
+    d4d("thread %d exited", tn);
+
+    return NULL;
+}
+void button_threads_clicked(GtkWidget *widget, gpointer data )
+{
+    const gchar *entry_text;
+    int tn, numthreads, ret;
+    
+    if (!gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget))) 
+    {
+        g_flags |= GE_FLAG_EXIT;
+        d4d("exit flag is set %x", g_flags);
+        return;
+    }
+
+    entry_text = gtk_entry_get_text(GTK_ENTRY(data));
+    numthreads = atoi(entry_text);
+
+    pthread_t *thr = calloc(numthreads, sizeof(pthread_t));
+    // clear the exit flag
+    g_flags &= ~GE_FLAG_EXIT;
+    //
+
+    for (tn = 1; tn <= numthreads; tn++) 
+    {
+        ret = pthread_create(&thr[tn], NULL, thread_func,
+                              (void *) tn);
+        if (ret != 0)
+        {
+           d4d("pthread_create failed with %d", ret);
+        }
+    }
+
+    free(thr);
+
+    g_threads = numthreads;
+    d4d("%d threads created", numthreads);
+}
+
+
+/* User clicked the "Clear List" button. */
+void button_clear_clicked( gpointer data )
+{
+    gtk_clist_clear((GtkCList *)g_clist);
+}
+
+void button_nullp_clicked( gpointer data )
+{
+    g_task = GETASK_NULLP_EVEN;
+}
+void button_nullp_odd_clicked( gpointer data )
+{
+    g_task = GETASK_NULLP_ODD;
+}
+
+gint main( int    argc,
+           gchar *argv[] )
+{                                
+    gint ret = 0;
+    GtkWidget *window = NULL;
+    GtkWidget *vbox = NULL, *hbox,*scrolled_window;
+    GtkWidget *button_malloc, *button_free, *button_clear, *button_threads, 
+        *button_mallinfo,*button_mallstat,*button_wild,*button_marker,
+		*button_overflow,*button_nullp,*button_nullp_odd; 
+    GtkWidget * lbl_size,*lbl_no;  
+    GtkWidget *edit_size,*edit_no,*edit_threads;
+
+    // open the trace marker
+    trace_fd = open("/sys/kernel/debug/tracing/trace_marker", O_WRONLY);
+
+    XInitThreads();
+
+    g_thread_init(NULL);
+    gdk_threads_init();
+    g_mutex_init(&mutex_list);
+    //
+    //gdk_threads_enter();
+    gtk_init(&argc, &argv);
+
+    // create the main window
+    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+
+    gtk_window_set_title(GTK_WINDOW(window), "GE MALLOC By RAYMOND rev1.22");
+    gtk_signal_connect(GTK_OBJECT (window), "delete_event",
+                       (GtkSignalFunc) gtk_exit, NULL);
+    gtk_window_set_default_size(GTK_WINDOW(window), 700, 400);
+   
+    // create a horizonal box at first level
+    hbox=gtk_hbox_new(FALSE, 5);
+    gtk_container_set_border_width(GTK_CONTAINER(hbox), 5);
+    gtk_container_add(GTK_CONTAINER(window), hbox);
+    gtk_widget_show(hbox);
+
+    // create a vertical box to hold buttons
+    vbox = gtk_vbox_new(FALSE, 0);
+    gtk_widget_set_usize(vbox, 100, 200);
+
+    gtk_box_pack_start(GTK_BOX(hbox), vbox, FALSE, TRUE, 0);
+
+    gtk_widget_show(vbox);
+
+    lbl_size = gtk_label_new("Size:");
+    gtk_misc_set_alignment (GTK_MISC(lbl_size), 0, 0);
+    edit_size = gtk_entry_new_with_max_length (50);
+    gtk_entry_set_text(GTK_ENTRY (edit_size), "80");
+    lbl_no = gtk_label_new("Number:");
+    gtk_misc_set_alignment (GTK_MISC(lbl_no), 0, 0);
+    edit_no = gtk_entry_new_with_max_length (50);
+    gtk_entry_set_text(GTK_ENTRY (edit_no), "10");
+    g_editno = edit_no;
+
+    button_malloc = gtk_button_new_with_label("malloc");
+    button_mallinfo = gtk_button_new_with_label("mallinfo");
+    button_mallstat = gtk_button_new_with_label("mallstat");
+    button_free = gtk_button_new_with_label("free");
+    button_wild = gtk_button_new_with_label("wildptr");
+    button_marker = gtk_button_new_with_label("marker");
+    button_overflow = gtk_button_new_with_label("overflow");
+    button_nullp = gtk_button_new_with_label("nullp even");
+    button_nullp_odd = gtk_button_new_with_label("nullp odd");
+
+    edit_threads = gtk_entry_new_with_max_length (50);
+    gtk_entry_set_text(GTK_ENTRY (edit_threads), "10");
+    button_threads = gtk_check_button_new_with_label("Multi-threads");
+
+    button_clear = gtk_button_new_with_label("Clear List");
+
+    gtk_signal_connect_object(GTK_OBJECT(button_malloc), "clicked",
+                              GTK_SIGNAL_FUNC(button_malloc_clicked),
+                              (gpointer) edit_size);
+    gtk_signal_connect_object(GTK_OBJECT(button_clear), "clicked",
+                              GTK_SIGNAL_FUNC(button_clear_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_free), "clicked",
+                              GTK_SIGNAL_FUNC(button_free_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_wild), "clicked",
+                              GTK_SIGNAL_FUNC(button_wild_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_overflow), "clicked",
+                              GTK_SIGNAL_FUNC(button_overflow_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_nullp), "clicked",
+                              GTK_SIGNAL_FUNC(button_nullp_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_nullp_odd), "clicked",
+                              GTK_SIGNAL_FUNC(button_nullp_odd_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_marker), "clicked",
+                              GTK_SIGNAL_FUNC(button_marker_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_mallinfo), "clicked",
+                              GTK_SIGNAL_FUNC(button_mallinfo_clicked),
+                              (gpointer) NULL);
+    gtk_signal_connect_object(GTK_OBJECT(button_mallstat), "clicked",
+                              GTK_SIGNAL_FUNC(button_mallstat_clicked),
+                              (gpointer) NULL);
+    g_signal_connect(GTK_OBJECT(button_threads), "toggled",
+                              G_CALLBACK(button_threads_clicked),
+                              (gpointer) edit_threads);
+
+    gtk_box_pack_start(GTK_BOX(vbox), lbl_size, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), edit_size, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), lbl_no, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), edit_no, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_malloc, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_mallinfo, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_mallstat, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_free, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_wild, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_overflow, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_nullp, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_nullp_odd, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_marker, FALSE, FALSE, 0);
+
+    gtk_box_pack_start(GTK_BOX(vbox), edit_threads, FALSE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), button_threads, FALSE, FALSE, 0);
+
+    gtk_box_pack_start(GTK_BOX(vbox), button_clear, FALSE, FALSE, 0);
+
+    gtk_widget_show(lbl_size);
+    gtk_widget_show(edit_size);
+    gtk_widget_show(lbl_no);
+    gtk_widget_show(edit_no);
+    gtk_widget_show(button_malloc);
+    gtk_widget_show(button_mallinfo);
+    gtk_widget_show(button_mallstat);
+    gtk_widget_show(button_free);
+    gtk_widget_show(button_wild);
+    gtk_widget_show(button_overflow);
+    gtk_widget_show(button_marker);
+    gtk_widget_show(edit_threads);
+    gtk_widget_show(button_threads);
+    gtk_widget_show(button_clear);
+    gtk_widget_show(button_nullp);
+    gtk_widget_show(button_nullp_odd);
+
+    //
+    /* Create a scrolled window to pack the g_clist widget into */
+    scrolled_window = gtk_scrolled_window_new (NULL, NULL);
+    gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
+                                    GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
+
+    gtk_box_pack_start(GTK_BOX(hbox), scrolled_window, TRUE, TRUE, 0);
+    gtk_widget_show (scrolled_window);
+
+    /* Create the g_clist. For this example we use 2 columns */
+    g_clist = gtk_clist_new(1);
+    gtk_clist_set_column_width (GTK_CLIST(g_clist), 0, 250);
+
+    /* Add the CList widget to the vertical box and show it. */
+    gtk_container_add(GTK_CONTAINER(scrolled_window), g_clist);
+
+    gtk_box_pack_start(GTK_BOX(hbox), scrolled_window, TRUE, TRUE, 0);
+    gtk_widget_show(g_clist);
+
+    gtk_widget_show(window);
+
+    // init global data buffer
+    g_databuffer = (int*)malloc(DATA_BUFFER_LENGTH);
+
+    gtk_main();
+    //gdk_threads_leave();
+
+    return ret;
+}

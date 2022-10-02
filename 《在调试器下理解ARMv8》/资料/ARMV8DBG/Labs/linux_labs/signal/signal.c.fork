@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <signal.h>
+
+#define MORE_SIGNALS
+#define DO_SEGFAULT
+#define HANDLE_SIGNAL
+
+static int gs_signals[] = 
+{
+    SIGSEGV, /* This is the most common crash */
+#ifdef MORE_SIGNALS
+    SIGQUIT, 
+    SIGILL, 
+    SIGTRAP,
+    SIGABRT,
+    SIGFPE,
+    SIGBUS,
+    SIGSYS,
+#endif //#MORESINALS
+    -1
+};
+static const char* gs_signal_names[] = 
+{
+    "SIGSEGV",
+#ifdef MORE_SIGNALS
+    "SIGQUIT",
+    "SIGILL", 
+    "SIGTRAP",
+    "SIGABRT",
+    "SIGFPE",
+    "SIGBUS",
+    "SIGSYS",
+#endif
+    NULL
+};
+static void crash_handler(int sig)
+{
+    printf("Child: received signal %d\n", sig);
+}
+void register_sig_handler()
+{
+    int i = 0;
+    while(gs_signals[i] != -1)
+    {
+        signal(gs_signals[i], crash_handler);
+        i ++;
+    }
+}
+int main(int argc, char * argv[])
+{
+    int pid;
+    
+    printf("Parent process started\n");
+    pid= fork();
+
+    if (pid < 0) /* error */
+        abort();
+    else if (pid) /* parent */
+    {
+        int i = 0;
+
+        sleep(10); //sleep 10 seconds to wait child
+
+        printf("Parent process ended\n");
+    }
+    else /* child */
+    {
+        printf("Child process started\n");
+#ifdef HANDLE_SIGNAL
+        register_sig_handler();
+#endif
+
+#ifdef DO_SEGFAULT
+        sleep(1);
+        char* p = 0;
+        *p = 'a';
+#endif //#ifdef DO_SEGFAULT
+        sleep(1);
+        printf("Child process ended\n");
+    }
+    return 0;//getchar();
+}

@@ -1,0 +1,150 @@
+.gdbinit:4: Error in sourced command file:
+a.out: No such file or directory.
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:100
+100	    printf("Stuntman for xsw by Raymond (rev1.0)\n");
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:100
+100	    printf("Stuntman for xsw by Raymond (rev1.0)\n");
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:100
+100	    printf("Stuntman for xsw by Raymond (rev1.0)\n");
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:100
+warning: Source file is more recent than executable.
+100	{
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+warning: Source file is more recent than executable.
+7	    md5[0] = A;
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff754) at hdtrap.c:100
+warning: Source file is more recent than executable.
+100	{
+#0  main (argc=1, argv=0xbffff754) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+warning: Source file is more recent than executable.
+7	    md5[0] = A;
+Breakpoint 1 at 0x804888d: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804888d in main at hdtrap.c:100
+        bt
+        continue
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/i386-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:100
+warning: Source file is more recent than executable.
+100	{
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:100
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048920 in calc_md5 (data=0x8048a00 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+warning: Source file is more recent than executable.
+7	    md5[0] = A;
+Breakpoint 1 at 0x804887b: file hdtrap.c, line 103.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804887b in main at hdtrap.c:103
+        bt
+        continue
+
+Breakpoint 1, main (argc=1, argv=0xbffff414) at hdtrap.c:103
+103	    printf("running...\n");
+#0  main (argc=1, argv=0xbffff414) at hdtrap.c:103
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048900 in calc_md5 (data=0x80489e0 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x8048870: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08048870 in main at hdtrap.c:100
+        bt
+        continue
+
+Breakpoint 1, main (argc=1, argv=0xbffff804) at hdtrap.c:103
+103	    printf("running...\n");
+#0  main (argc=1, argv=0xbffff804) at hdtrap.c:103
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048900 in calc_md5 (data=0x80489e0 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x804887b: file hdtrap.c, line 103.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x0804887b in main at hdtrap.c:103
+        bt
+        continue
+
+Breakpoint 1, main (argc=1, argv=0xbffff754) at hdtrap.c:103
+103	    printf("running...\n");
+#0  main (argc=1, argv=0xbffff754) at hdtrap.c:103
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048900 in calc_md5 (data=0x80489e0 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;
+Breakpoint 1 at 0x8048870: file hdtrap.c, line 100.
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x08048870 in main at hdtrap.c:100
+        bt
+        continue
+
+Breakpoint 1, main (argc=1, argv=0xbffff804) at hdtrap.c:103
+103	    printf("running...\n");
+#0  main (argc=1, argv=0xbffff804) at hdtrap.c:103
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048900 in calc_md5 (data=0x80489e0 "testing data-xxxxxxx", nLen=20, md5=0x0) at md5.c:7
+7	    md5[0] = A;

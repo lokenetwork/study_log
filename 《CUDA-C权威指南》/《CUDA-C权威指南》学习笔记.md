@@ -563,3 +563,31 @@ CUDA 库的调用流程。
 ![cuda-c-1-4-3](D:\0-博客\study_log\《CUDA-C权威指南》\cuda-c-1-4-3.png)
 
 > 可以说，数学核心库（MKL）是稀疏线性代数性能的黄金准则。 MKL使用向量指令在多核CPU上手动优化的执行密集和稀疏线性代数。 目前有大量对各种计算内核中的MKL和cuSPARSE进行比较的文献资 料。 随着CUDA 5.0版本的发布，NVIDIA在多个计算内核和多个数据集 上对cuSPARSE和MKL进行了全面的性能比较。通过在18个不同的数据 集上执行稀疏矩阵-稠密向量乘法，研究人员发现，与MKL相比， cuSPARSE的性能有1.1～3.1倍的提升。稀
+
+
+
+OpenAAC 的优缺点。
+
+> 本节介绍了OpenACC的执行和编程模型。OpenACC是一个灵活 的、易于使用的、高性能的编程模型，它在许多方面对CUDA和CUDA 库进行了补充。与CUDA库相比，OpenACC的使用更加灵活，允许你使 用C语言编写自己的计算函数。与CUDA相比，OpenACC的使用更为方 便，在通信和计算方面比CUDA C需要更少的人为参与。 但是，OpenACC也有一些缺点。一个忽略数据移动的简单的 OpenACC实现往往会由于不必要的内存拷贝而使性能降低。在默认情 况下OpenACC对优化策略是保守的。即便使用async，copyin和copyout 子句，OpenACC的性能表现往往落后于手动编码的CUDA程序。此外， 在许多领域中，OpenACC在性能和可用性上根本无法与CUDA库相抗 衡。 虽然有这些缺点，但OpenACC的性能、可用性和可定制性间的平 衡使之成为非常有吸引力的编程模型，是对有高性能GPU应用程序快速 开发的CUDA程序的补充。
+
+
+
+最后第10章讲了 CUDA 相关的编译，makefile 等知识。
+
+![cuda-c-1-4-5](D:\0-博客\study_log\《CUDA-C权威指南》\cuda-c-1-4-5.png)
+
+<img src="D:\0-博客\study_log\《CUDA-C权威指南》\cuda-c-1-4-4.jpg" alt="cuda-c-1-4-4" style="zoom:50%;" /> 
+
+
+
+需要关注 CUDA-gdb 调试器。
+
+> 在CUDA里内核调试有3种主要的方法：cuda-gdb、printf和 assert。 10.3.1.1 使用cuda-gdb 如果你已经熟悉了主机调试工具gdb，那么会发现cuda-gdb是一种 很自然的延伸。利用现有的gdb知识，能很快熟练地掌握调试CUDA程 序。
+
+
+
+
+
+还有 cuda 内存检测工具 cuda-memcheck 。
+
+> cuda-memcheck的操作在 用户交互方面更加自动化和粗粒度，但是对于CUDA内核中的内存错 误，cuda-memcheck提供了更详细的数据。cuda-memcheck包含两个独立 的工具： ·memcheck工具 ·racecheck工具

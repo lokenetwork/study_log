@@ -101,3 +101,57 @@ _beginthreadex 函数是 C运行时库的函数。
 ![4-1](D:\0-博客\study_log\《Windows高级编程》\4-1.png)
 
 ![4-2](D:\0-博客\study_log\《Windows高级编程》\4-2.png)
+
+Win32 的弊端。
+
+![4-3](D:\0-博客\study_log\《Windows高级编程》\4-3.png)
+
+进程空间划分。
+
+![4-4](D:\0-博客\study_log\《Windows高级编程》\4-4.png)
+
+![4-5](D:\0-博客\study_log\《Windows高级编程》\4-5.png)
+
+注意 VirtualAlloc 与 VirtualFree 这两个，其实就是对应 Linux 的 malloc 与 free。
+
+![4-6](D:\0-博客\study_log\《Windows高级编程》\4-6.png)
+
+Win32 的内存属性。
+
+![4-7](D:\0-博客\study_log\《Windows高级编程》\4-7.png)
+
+内存的用法。
+
+![4-8](D:\0-博客\study_log\《Windows高级编程》\4-8.png)
+
+设置线程栈的大小。
+
+![4-9](D:\0-博客\study_log\《Windows高级编程》\4-9.png)
+
+内存映射 EXE 与 DLL
+
+![5-1](D:\0-博客\study_log\《Windows高级编程》\5-1.png)
+
+EXE，DLL 的加载流程。
+
+![5-2](D:\0-博客\study_log\《Windows高级编程》\5-2.png)
+
+代码与数据的内存布局。
+
+![5-3](D:\0-博客\study_log\《Windows高级编程》\5-3.png)
+
+可以创建多实例共享的全局变量的。
+
+![5-5](D:\0-博客\study_log\《Windows高级编程》\5-5.jpg)
+
+注意这两个函数 CreateFileMapping 和 OpenFileMapping。
+
+![5-6](D:\0-博客\study_log\《Windows高级编程》\5-6.png)
+
+malloc 可能是单线程的。
+
+![5-7](D:\0-博客\study_log\《Windows高级编程》\5-7.png)
+
+C++ 重载功能使用堆。
+
+![5-8](D:\0-博客\study_log\《Windows高级编程》\5-8.png)

@@ -148,3 +148,80 @@ Shannon-Fano coding（香农编码） 与 Huffman coding（哈夫曼编码）都
 adpative model，可适应模型。
 
 > For this reason, compression research in the last 10 years has concentrated on adaptive models. Y 3 4.00 bits 4 bits 12 12.0 Z 2 4.58 bits 4 bits 8 9.16 89 83.56 When using an adaptive model, data does not have to be scanned once before coding in order to generate statistics. Instead, the statistics are continually modified as new characters are read in and coded. The general flow of a program using an adaptive model looks something like that shown in Figures 2.2 and 2.3. 
+
+
+
+注意 two passes
+
+> This type of compression frequently makes two passes. A first pass over the data performs a highlevel, signal-processing function. This frequently consists of transforming the data into the frequency domain, using algorithms similar to the well-known Fast Fourier Transform (FFT). Once the data has been transformed, it is “smoothed,” rounding off high and low points. Loss of signal occurs here. Finally, the frequency points are compressed using conventional lossless techniques. 
+
+
+
+将代码排列成二进制树，则解决了对这些变长代码的解码问题 是什么意思？
+
+```
+The first two properties go hand in hand. Developing codes that vary in length according to theprobability of the symbol they are encoding makes data compression possible. And arranging thecodes as a binary tree solves the problem of decoding these variable-length codes
+```
+
+
+
+哈夫曼编码具有独特的前缀属性，这是什么意思？
+
+> Huffman coding shares most characteristics of Shannon-Fano coding. It creates variable-length codes that are an integral number of bits. Symbols with higher probabilities get shorter codes. Huffman codes have the unique prefix attribute, which means they can be correctly decoded despite being variable length. Decoding a stream of Huffman codes is generally done by following a binary decoder tree. 
+
+![1-1](D:\0-博客\study_log\《The Data Compression Book》\1-1.png)
+
+
+
+构建哈夫曼解码树 与 Shannon-Fano树 是不一样的。
+
+> Building the Huffman decoding tree is done using a completely different algorithm from that of the Shannon-Fano method. The Shannon-Fano tree is built from the top down, starting by assigning the most significant bits to each code and working down the tree until finished. Huffman codes are built from the bottom up, starting with the leaves of the tree and working progressively closer to the root. 
+
+
+
+哈夫曼编码是一种理论方式，有非常多的实战论文寻求更好的方法来使用这种理论。
+
+> Since D. A. Huffman first published his 1952 paper, “A Method for the Construction of MinimumRedundancy Codes,” his coding algorithm has been the subject of an overwhelming amount ofadditional research. Information theory journals to this day carry numerous papers on theimplementation of various esoteric flavors of Huffman codes, searching for ever better ways to usethis coding method. Huffman coding is used in commercial compression programs, FAX machines,and even the JPEG algorithm. The next logical step in this book is to outline the C code needed toimplement the Huffman coding scheme.
+
+
+
+什么是 0 阶 建模与 1 阶 建模，为什么需要传递 257 个概率表。
+
+> The problem with this “minor drawback” is that as we attempt to improve the compression ability of our program, the penalty becomes more and more significant. If we move from order-0 to order-1 modeling, for example, we now have to transmit 257 probability tables instead of just one. So by using a technique that enables us to predict characters more accurately, we incur a penalty in terms of added overhead. Unless the files we are going to compress are very large, this added penalty will frequently wipe out any improvements made by increasing the order. 
+>
+
+补充，他指的应该是实时性，不断读取不断建模，如果是之前的方式，就是要传递 257 个概率表。
+
+
+
+超过最大值就除以 2 ，作为系数。
+
+> From this we can deduce that if the weight at the root node of a Huffman tree equals fib(i), then thelongest code for that tree is i - 1. This means that if the integers used with our Huffman codes areonly 16 bits long, a root value of 4181 could potentially introduce an overflow. (This low value isfrequently overlooked in simple Huffman implementations. Setting up a file with Fibonacci countsup to fib[18] is a good way to test a Huffman program). When we update the tree, we ought to checkfor a maximum value. Once we reach that value, we need to rescale all the counts, typically dividingthem by a fixed factor, often two.
+
+
+
+哈夫曼 是 最好的固定长度编码方法
+
+> Huffman coding has been proven the best fixed-length coding method available. 
+
+
+
+在压缩双色图像时，这将是一个问题，
+
+> This would be a problem when compressing two-color images, like those coming from a fax machine. Since there are only two colors, an ordinary coding method would assign the 1 bit to one color and the 0 bit to the other. Since both codes have only a single bit, Huffman coding is not going to be able to compress this data at all. No matter how high the probability of one of the bits, we are still going to have to encode it using one bit. 
+>
+
+
+
+将比特分组并应用Huffman编码 来解决 哈夫曼整形问题。
+
+> The conventional solution to this problem is to group the bits into packets and apply Huffman coding. But this weakness prevents Huffman coding from being a universal compressor. 
+
+
+
+
+
+
+
+
+

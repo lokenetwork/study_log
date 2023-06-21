@@ -219,6 +219,38 @@ The first two properties go hand in hand. Developing codes that vary in length a
 
 
 
+解决一开始 概率不准确的问题。
+
+> The simple order-1 program does in fact do a creditable job of compression, but it has a couple of problems to address. First, the model for this program makes it a slow starter. Every context starts off with 257 symbols initialized to a single count, meaning every symbol starts off being encoded in roughly eight bits. As new symbols are added to the table, they will gradually begin to be encoded in fewer bits. This process, however, will not happen very quickly. 
+
+
+
+大多数著名的字典算法是自适应的
+
+> At present, dictionary-based compression schemes using static dictionaries are mostly ad hoc, implementation dependent, and not general purpose. Most well-known dictionary algorithms are adaptive. Instead of having a completely defined dictionary when compression begins, adaptive schemes start out either with no dictionary or with a default baseline dictionary. As compression proceeds, the algorithms add new phrases to be used later as encoded tokens. 
+
+
+
+GIF使用了 LZW 算法。
+
+> Compuserve Information Service developed a dictionary-based compression scheme used to encode bit-mapped graphical images. The GIF format uses an LZW variant to compress repeated sequences in screen images. Compression is clearly needed when using these type of images. Computer images take up lots of storage space. As video resolutions improve, the size of the saved images grows 
+
+
+
+Modern 里面本身就有压缩算法
+
+> Compressing files before transmitting them saves telecommunications bandwidth. But this requires compatible compression software on both ends. A more convenient method of conserving bandwidth’s to build data compression directly into the modem. Microcom Corp. originally developed this idea, which used Huffman coding to compress data before it was transmitted by its modems. Microcom’s compression algorithm, MNP-5, uses a dynamic Huffman coding scheme that performs well as a general-purpose compressor on most data streams. 
+
+
+
+音频输出最后会转成 analog format 模拟信号，然后才能被人的耳朵接受。
+
+> For modern computers to manipulate sound, they first have to convert it to a digital format. The sound samples can then be processed, transmitted, and converted back to analog format, where they can finally be received by the human ear.
+
+
+
+
+
 
 
 

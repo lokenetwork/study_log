@@ -249,6 +249,102 @@ Modern 里面本身就有压缩算法
 
 
 
+波形中最大的可识别成分似乎 有一个大约两毫秒的周期
+
+> This particular “snapshot” shows about 5 milliseconds (ms) of output. Notice that the largest recognizable components of the waveform appear to have a period of roughly two milliseconds. This corresponds to a frequency of about 500Hz, a fairly characteristic frequency found in speech or music. 
+
+
+
+ADC 把 模拟信号 转成 数字信号
+
+> In most computer systems, this first step of digitization is done with an analog-to-digital converter (ADC). The ADC takes a given voltage and scales it to an appropriate digital measurement. An eight-bit ADC, for example, might have a “full scale” input voltage of 500 millivolts (mv)—it would output an eight-bit value of 255 if the input voltage were 500mv and zero if the input voltage were 
+
+
+
+声音通过 DAC 被播放出来
+
+> Eventually, the sound needs to be played back. This is done via another electronic component that is the converse of the ADC: the digital-to-analog converter (DAC). The DAC is responsible for taking a digital value and converting it to a corresponding analog signal. To be effective, the conversion process needs to be the mirror image of that performed when converting the analog signal to digital. While the exact voltages produced at the output of the DAC do not need to be identical to those seen at the input, they do need to be proportional to one another so that one waveform corresponds to the other. In addition, the samples need to be output at exactly the same rate that they were read in. Any deviation here will cause the output frequencies to be shifted up or down from the input, generally not a good thing. 
+
+
+
+早期的电脑只能发出哔哔声和嗡嗡声
+
+> 早期的台式电脑并没有真正推动声音再现技术的发展。最初的IBM和苹果电脑都有内置的扬 声器作为标准设备，但他们只给了程序员一个位来控制扬声器。这意味着扬声器通常只能用 来发出哔哔声和嗡嗡声，而不是真正的数字化声音。
+
+
+
+Macintosh 增加了 8 位的模转换器
+
+> 然而，在20世纪80年代初，许多计算机制造商看到，真正的数字化声音能力可以以相对较低 的成本添加到他们的计算机。苹果公司是最突出的制造商，在Macintosh上增加了一个八位数 模转换器，这为使用真正的数字化音频打开了大门。
+
+
+
+DSP 作为辅助处理器
+
+> 它将数字信号处理器（DSP）芯片作为一个辅助处理器； 其目的是为了从主CPU上卸载工作，如处理数字化的音频。有一段时间，其他制造商也采用 了这种设计，例如，苹果公司的Macintosh电脑的AV系列。
+
+
+
+英特尔的P6处理器 让钟摆。
+
+> 最近，似乎钟摆可能 向另一个方向移动，因为CPU中新的大量处理能力将使其除了处理常规任务外，还可以用于 音频和视频处理。英特尔正在用其新的P6处理器颁布这种配置，该处理器有足够的周期，可 用于即时压缩和解压音频和视频，甚至在电子表格中计算数字时也可以。
+
+
+
+
+
+> LZSS在压缩时利用的是文件中的重复字符串。顺序0哈夫曼编码只是利用了单个序列的整体 频率差异。
+
+
+
+不具备 在输入波形中找到这种类型的冗余的能力
+
+> 即使是看这样一个 "繁忙 "的样本，人的眼睛也会挑出模式。波形的波峰和波谷以一 定的时间间隔出现，告诉我们信号中存在正弦波。不幸的是，我们现有的压缩算法并不具备 在输入波形中找到这种类型的冗余的能力。为了做得更好，我们需要转移到一个新的领域： 有损压缩。
+
+
+
+找一下 LPC 和 ADPCM 的代码实现。
+
+> 像LPC和ADPCM这样的过程代表了将在桌面上越来越频繁地使用的算法类型。不幸的是，这 些算法的复杂性远远超出了本章中样本程序的范围。
+
+
+
+他用了 8 位 的灰度图像来表达振幅。
+
+> In this case, the “signal” is a graphical image. The X and Y axes are the two dimensions of the screen. The amplitude of the “signal” in this case is simply the value of a pixel at a particular point on the screen. For the examples used in this chapter, that is an eight-bit value used to represent a grey-scale value. So a graphical image displayed on the screen can be thought of as a complex threedimensional signal, with the value on the Z axis denoted by the color on the screen at a given point. This is the spatial representation of the signal. 
+
+
+
+DCT可用于将空间信息转换为 "频率 "或 "光谱 "信息
+
+> The DCT can be used to convert spatial information into “frequency” or “spectral” information, with the X and Y axes representing frequencies of the signal in two different dimensions. And like the FFT, there is an Inverse DCT (IDCT) function that can convert the spectral representation of the signal back to a spatial one. 
+
+
+
+有很多技巧可以加速 傅里叶 跟 DCT 变换的计算。
+
+> 由于DCT与离散傅里叶变换有关，许多用于加速傅里叶变换系列的技术也可以应用于DCT， 这并不令人惊讶。事实上，全世界的人都在全心全意地将数字信号处理技术应用到DCT上。 执行变换所需的时间每减少一个周期，就会有一笔小财富，所以这些研究工作有很好的激励 作用。
+
+
+
+JPEG 的量子位
+
+> JPEG算法使用一个量化矩阵来实现量化。对于 DCT 矩阵中的每一个元素位置，量化矩阵中 的对应值给出一个量子值。量子值表明该元素在图片的压缩演绎中的步长是多少，其值范围 从1到255。
+
+
+
+JPEG 已经定义好了一套量化矩阵。
+
+> 
+
+
+
+彩色图片是把 RGB，YUV 分开多个通道压缩的。
+
+> 颜色是什么？ 本章中的示例程序和大部分文字都谈到了如何压缩只有一种颜色成分的图像，通常是灰度。 这就留下了如何处理彩色图像的问题。 彩色图像一般由三个部分组成，如RGB的红、绿、蓝，或YUV的亮度和色度。在这些情况下 ，JPEG将图像处理成实际上是三个独立的图像。一个RGB图像将首先压缩它的红色成分，然 后是绿色，然后是蓝色。这在本质上只是更多的相同。
+
+
+
 
 
 
